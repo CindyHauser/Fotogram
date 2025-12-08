@@ -7,24 +7,38 @@ body {
 
 .header_mainwebsite {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background-color: rgb(8, 32, 41);
     height: 100px;
-    padding-left: 30px;
+    padding-inline: 100px;
+}
+
+.monitor_border_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    height: 100px;
 }
 
 .header_mainwebsite img {
     height: 50px;
 }
 
-.main_mainwebsite {
+.monitor_border_main {
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-inline: 100px;
+}
+
+.main_mainwebsite {
+    display: flex;
+    justify-content: center;
     flex: 1;
     background-color: rgb(5, 23, 30);
-    padding-inline: 100px;
 }
 
 #imageLoad {
@@ -44,7 +58,7 @@ body {
 h1 {
     color: white;
     margin-bottom: 100px;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .footer_mainwebsite {
