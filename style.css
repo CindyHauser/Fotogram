@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: rgb(8, 32, 41);
+}
+
+header img {
+    height: 100px;
+}
