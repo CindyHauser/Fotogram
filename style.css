@@ -67,7 +67,21 @@ h1 {
     margin-top: 80px;
 }
 
+/* #pictureDialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+}
+
+#pictureDialog img {
+    height: 300px;
+}
+ */
+
+
 .footer_mainwebsite {
     background-color: rgb(8, 32, 41);
-    height: 100px;
+    min-height: 100px;
 }
