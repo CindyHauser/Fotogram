@@ -7,7 +7,6 @@
     <title>Fotogram</title>
     <link rel="shortcut icon" href="./img-logo/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>
 </head>
 
 <body onload="init()">
@@ -25,11 +24,28 @@
 
             <section id="imageLoad"></section>
 
+            <dialog id="pictureDialog" onclick="closeDialog()">
+                <section onclick="stopBubbling(event)">
+                <header>
+                    <h2></h2>
+                    <button onclick="closeDialog()">x-icon</button>
+                </header>
+                <main id="dialogMain">
+
+                </main>
+                <footer id="dialogFooter">
+
+                </footer>
+                </section>
+            </dialog>
+            
         </div>
     </main>
 
     <footer class="footer_mainwebsite">
     </footer>
+
+    <script src="./script.js"></script>
 
 </body>
 
