@@ -71,8 +71,8 @@ function buttonRight(index) {
 }
 
 function footerDialog(index) {
-    return `<button onclick="buttonLeft(${index})" class="dialog_button">links</button>
+    return `<button onclick="buttonLeft(${index})" class="dialog_button"><span class="arrow left"></span></button>
     <span>${index + 1}/${images.length}</span>
-    <button onclick="buttonRight(${index})" class="dialog_button">rechts</button>
+    <button onclick="buttonRight(${index})" class="dialog_button"><span class="arrow right"></span></button>
     `
 }

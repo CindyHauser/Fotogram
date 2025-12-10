@@ -41,6 +41,10 @@ body {
     background-color: rgb(5, 23, 30);
 }
 
+h1 {
+    font-size: 45px;
+}
+
 #imageLoad {
     display: flex;
     flex-wrap: wrap;
@@ -70,6 +74,8 @@ h1 {
 #pictureDialog {
     background-color: rgb(15, 54, 68);
     border-radius: 20px;
+    border-color: black;
+    color: white;
 }
 
 .dialg_style img {
@@ -81,13 +87,39 @@ h1 {
 #dialogFooter {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin-top: 50px;
 }
 
 .dialog_button {
+    border: none;
     border-radius: 50%;
     height: 45px;
     width: 45px;
+    background-color: rgb(30, 30, 31);
+}
+
+.x_button {
+    color: white;
+    background-color: rgb(15, 54, 68);
+}
+
+.arrow {
+    border: solid rgb(133, 28, 28);
+    border-width: 0px 8px 8px 0px;
+    display: inline-block;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.right {
+    margin-right: 5px;
+    transform: rotate(-45deg);
+}
+
+.left {
+    margin-left: 5px;
+    transform: rotate(135deg);
 }
 
 .dialog_button:hover {
