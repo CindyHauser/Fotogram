@@ -99,6 +99,10 @@ h1 {
     background-color: rgb(30, 30, 31);
 }
 
+#pictureHeading {
+    font-size: 16px;
+}
+
 .x_button {
     color: white;
     background-color: rgb(15, 54, 68);
