@@ -42,8 +42,10 @@ function closeDialog() {
 }
 
 function showPictures(index) {
+    let showHeadingOfPicture = document.getElementById("pictureHeading");
     let showPictureRef = document.getElementById('dialogMain');
     showPictureRef.innerHTML = showSamePic(index);
+    showHeadingOfPicture.innerHTML = images[index];
 }
 
 function showSamePic(index) {
