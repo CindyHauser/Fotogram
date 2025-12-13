@@ -21,17 +21,8 @@ function init() {
 }
 
 function imagesLoading(index) {
-    return `<a href="#" onclick="openDialog(${index})"><img src="./imgs_fotogram/${images[index]}"></a>`;
+    return `<a href="#" onclick="openDialog(${index})"><img src="./imgs_fotogram/${images[index]}" alt="Urlaubsbild"></a>`;
 }
-
-// function pressEnterToOpen (event, index) {
-//         if (event.key === 'Enter') {
-//             console.log(event.key);
-//             console.log(index);
-            
-//             openDialog(index);
-//     }
-// }
 
 const dialogRef = document.getElementById("pictureDialog");
 const dialogFooterRef = document.getElementById("dialogFooter");
@@ -58,7 +49,7 @@ function showPictures(index) {
 }
 
 function showSamePic(index) {
-    return `<img src="./imgs_fotogram/${images[index]}">`
+    return `<img src="./imgs_fotogram/${images[index]}" alt="Urlaubsbild">`
 }
 
 function buttonLeft(index) {
@@ -88,7 +79,7 @@ function pressArrow (event) {
         buttonLeft(index);
     } if (event.key === "ArrowRight") {
         index = spanIndex.dataset.arrows;
-        buttonRight(index);
+        buttonRight(index); 
     }
 }
 
