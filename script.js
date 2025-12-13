@@ -21,8 +21,17 @@ function init() {
 }
 
 function imagesLoading(index) {
-    return `<img onclick="openDialog(${index})" src="./imgs_fotogram/${images[index]}">`;
+    return `<a href="#" onclick="openDialog(${index})"><img src="./imgs_fotogram/${images[index]}"></a>`;
 }
+
+// function pressEnterToOpen (event, index) {
+//         if (event.key === 'Enter') {
+//             console.log(event.key);
+//             console.log(index);
+            
+//             openDialog(index);
+//     }
+// }
 
 const dialogRef = document.getElementById("pictureDialog");
 const dialogFooterRef = document.getElementById("dialogFooter");
