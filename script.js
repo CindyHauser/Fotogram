@@ -81,9 +81,20 @@ function buttonRight(index) {
     }
 }
 
+function pressArrow (event) {
+    const spanIndex = document.getElementById('dialogSpanToGetId');
+    if (event.key === "ArrowLeft") {
+        index = spanIndex.dataset.arrows;
+        buttonLeft(index);
+    } if (event.key === "ArrowRight") {
+        index = spanIndex.dataset.arrows;
+        buttonRight(index);
+    }
+}
+
 function footerDialog(index) {
     return `<button onclick="buttonLeft(${index})" class="dialog_button"><span class="arrow left"></span></button>
-    <span>${index + 1}/${images.length}</span>
+    <span id="dialogSpanToGetId" data-arrows=${index}>${index + 1}/${images.length}</span>
     <button onclick="buttonRight(${index})" class="dialog_button"><span class="arrow right"></span></button>
     `
 }
