@@ -1,16 +1,16 @@
 let images = [
-    "img1.jpg",
-    "img10.jpg",
-    "img11.jpg",
-    "img12.jpg",
-    "img2.jpg",
-    "img3.jpg",
-    "img4.jpg",
-    "img5.jpg",
-    "img6.jpg",
-    "img7.jpg",
-    "img8.jpg",
-    "img9.jpg",
+    "buntes-haus.jpg",
+    "schoener-park.jpg",
+    "urlaubsdrink.jpg",
+    "wildnis.jpg",
+    "harz-escape.jpg",
+    "kind-an-der-wand.jpg",
+    "brauerei.jpg",
+    "genusswerkstatt.jpg",
+    "miniaturmodell.jpg",
+    "strand.jpg",
+    "gute-aussicht.jpg",
+    "baum-im-hof.jpg",
 ];
 
 function init() {

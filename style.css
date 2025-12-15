@@ -79,6 +79,11 @@ h1 {
     color: white;
 }
 
+#pictureDialog::backdrop {
+    background-color: black;
+    opacity: 0.5;
+}
+
 .dialog_header {
     display: flex;
     justify-content: space-between;
