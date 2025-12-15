@@ -13,7 +13,7 @@
 
     <header class="header_mainwebsite">
         <div class="monitor_border_header">
-            <img src="./img-logo/Fotogram_Logo.svg" alt="Fotogram Logo">
+            <img src="./img-logo/Fotogram_Logo.svg" alt="Fotogram Logo" role="banner">
         </div>
     </header>
 
@@ -22,13 +22,13 @@
 
             <h1>Meine Urlaubsbilder</h1>
 
-            <section id="imageLoad"></section>
+            <section id="imageLoad" aria-haspopup="dialog" aria-controls="pictureDialog"></section>
 
-            <dialog id="pictureDialog" onclick="closeDialog()" onkeydown="pressArrow (event)">
+            <dialog id="pictureDialog" onclick="closeDialog()" onkeydown="pressArrow (event)" aria-labelledby="pictureHeading">
                 <section onclick="stopBubbling(event)" class="dialog_style">
                     <header class="dialog_header">
                         <h2 id="pictureHeading"></h2>
-                        <button onclick="closeDialog()" class="dialog_button x_button"></button>
+                        <button onclick="closeDialog()" class="dialog_button x_button" aria-label="Dialog schließen"></button>
                     </header>
                     <main id="dialogMain">
 
