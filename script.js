@@ -24,13 +24,13 @@ function imagesLoading(index) {
     return `<a href="#" onclick="openDialog(${index})"><img src="./imgs_fotogram/${images[index]}" alt="Urlaubsbild"></a>`;
 }
 
-const dialogRef = document.getElementById("pictureDialog");
-const dialogFooterRef = document.getElementById("dialogFooter");
+const DIALOGREF = document.getElementById("pictureDialog");
+const DIALOGFOOTERREF = document.getElementById("dialogFooter");
 
 function openDialog(index) {
-    dialogRef.showModal();
+    DIALOGREF.showModal();
     showPictures(index);
-    dialogFooterRef.innerHTML = footerDialog(index);
+    DIALOGFOOTERREF.innerHTML = footerDialog(index);
 }
 
 function stopBubbling(event) {
@@ -38,7 +38,7 @@ function stopBubbling(event) {
 }
 
 function closeDialog() {
-    dialogRef.close();
+    DIALOGREF.close();
 }
 
 function showPictures(index) {
