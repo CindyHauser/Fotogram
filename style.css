@@ -121,11 +121,14 @@ h1 {
 }
 
 .x_button {
+    height: 10px;
+    width: 20px;
     color: white;
     background-color: rgb(15, 54, 68);
 }
 
 .x_button::after {
+    height: 0;
     display: inline-block;
     content: "\00d7";
     font-size: 25px;
@@ -172,6 +175,27 @@ h1 {
     color: white;
 }
 
+@media (max-width: 610px) {
+
+        h1 {
+        text-align: center;
+    }
+
+    #imageLoad img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .dialog_style img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .monitor_border_main {
+        padding-inline: 0;
+    }
+}
+
 @media (max-width: 420px) {
 
     .header_mainwebsite {
@@ -215,25 +239,4 @@ h1 {
         margin-top: 24px;
     }
 
-}
-
-@media (max-width: 610px) {
-
-        h1 {
-        text-align: center;
-    }
-
-    #imageLoad img {
-        height: 120px;
-        width: 120px;
-    }
-
-    .dialog_style img {
-        height: 300px;
-        width: 300px;
-    }
-
-    .monitor_border_main {
-        padding-inline: 0;
-    }
 }
