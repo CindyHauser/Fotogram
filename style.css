@@ -128,7 +128,7 @@ h1 {
 .x_button::after {
     display: inline-block;
     content: "\00d7";
-    font-size: 25px;    
+    font-size: 25px;
 }
 
 .arrow {
@@ -161,4 +161,57 @@ h1 {
     min-height: 100px;
     color: rgb(119, 113, 113);
     margin-top: 0;
+}
+
+@media (max-width: 420px) {
+
+    .header_mainwebsite {
+        padding-inline: 24px;
+    }
+
+    .monitor_border_main {
+        padding-inline: 16px;
+    }
+
+    .header_mainwebsite img {
+        height: 36px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        font-size: 36px;
+    }
+
+    #imageLoad img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .dialog_style img {
+        height: 224px;
+        width: 224px;
+    }
+
+    .dialog_header {
+        margin-bottom: 20px;
+    }
+
+    #dialogFooter {
+        margin-top: 24px;
+    }
+
+}
+
+@media (max-width: 610px) {
+
+        h1 {
+        text-align: center;
+    }
+
+    #imageLoad img {
+        height: 120px;
+        width: 120px;
+    }
 }
