@@ -13,6 +13,7 @@ let images = [
     "baum-im-hof.jpg",
 ];
 
+/**lädt alle Bilder auf die Website beim Öffnen dieser*/
 function init() {
     let contentImages = document.getElementById("imageLoad");
     for (let index = 0; index < images.length; index++) {
@@ -24,13 +25,13 @@ function imagesLoading(index) {
     return `<a href="#" onclick="openDialog(${index})"><img src="./imgs_fotogram/${images[index]}" alt="Urlaubsbild"></a>`;
 }
 
-const DIALOGREF = document.getElementById("pictureDialog");
-const DIALOGFOOTERREF = document.getElementById("dialogFooter");
+const DIALOG_REF = document.getElementById("pictureDialog");
+const DIALOG_FOOTER_REF = document.getElementById("dialogFooter");
 
 function openDialog(index) {
-    DIALOGREF.showModal();
+    DIALOG_REF.showModal();
     showPictures(index);
-    DIALOGFOOTERREF.innerHTML = footerDialog(index);
+    DIALOG_FOOTER_REF.innerHTML = footerDialog(index);
 }
 
 function stopBubbling(event) {
@@ -38,7 +39,7 @@ function stopBubbling(event) {
 }
 
 function closeDialog() {
-    DIALOGREF.close();
+    DIALOG_REF.close();
 }
 
 function showPictures(index) {
@@ -72,13 +73,14 @@ function buttonRight(index) {
     }
 }
 
+/**zum Benutzen der Pfeiltasten auf der Tastatur*/
 function pressArrow (event) {
-    const spanIndex = document.getElementById('dialogSpanToGetId');
+    const SPAN_INDEX = document.getElementById('dialogSpanToGetId');
     if (event.key === "ArrowLeft") {
-        index = spanIndex.dataset.arrows;
+        index = SPAN_INDEX.dataset.arrows;
         buttonLeft(index);
     } if (event.key === "ArrowRight") {
-        index = spanIndex.dataset.arrows;
+        index = SPAN_INDEX.dataset.arrows;
         buttonRight(index); 
     }
 }
