@@ -159,8 +159,17 @@ h1 {
     align-items: center;
     background-color: var(--header-footer-color);
     min-height: 100px;
-    color: rgb(119, 113, 113);
+    color: rgb(180, 179, 179);
     margin-top: 0;
+}
+
+.footer_mainwebsite a {
+    text-decoration: underline;
+    color: rgb(180, 179, 179);
+}
+
+.footer_mainwebsite a:hover {
+    color: white;
 }
 
 @media (max-width: 420px) {
