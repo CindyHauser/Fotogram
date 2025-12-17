@@ -13,7 +13,10 @@ let images = [
     "baum-im-hof.jpg",
 ];
 
-/**lädt alle Bilder auf die Website beim Öffnen dieser*/
+const DIALOG_REF = document.getElementById("pictureDialog");
+const DIALOG_FOOTER_REF = document.getElementById("dialogFooter");
+
+/**Loads all images when opening the website.*/
 function init() {
     let contentImages = document.getElementById("imageLoad");
     for (let index = 0; index < images.length; index++) {
@@ -22,11 +25,11 @@ function init() {
 }
 
 function imagesLoading(index) {
-    return `<a href="#" onclick="openDialog(${index})"><img src="./imgs_fotogram/${images[index]}" alt="Urlaubsbild"></a>`;
+    return `
+    <a href="#" onclick="openDialog(${index})">
+        <img src="./imgs_fotogram/${images[index]}" alt="Urlaubsbild">
+    </a>`;
 }
-
-const DIALOG_REF = document.getElementById("pictureDialog");
-const DIALOG_FOOTER_REF = document.getElementById("dialogFooter");
 
 function openDialog(index) {
     DIALOG_REF.showModal();
@@ -53,7 +56,7 @@ function showSamePic(index) {
     return `<img src="./imgs_fotogram/${images[index]}" alt="Urlaubsbild">`
 }
 
-function buttonLeft(index) {
+function seePreviousImage(index) {
     index--;
     if (index >= 0) {
         openDialog(index);
@@ -63,7 +66,7 @@ function buttonLeft(index) {
     }
 }
 
-function buttonRight(index) {
+function seeNextImage(index) {
     index++;
     if (index < images.length) {
         openDialog(index);
@@ -73,21 +76,28 @@ function buttonRight(index) {
     }
 }
 
-/**zum Benutzen der Pfeiltasten auf der Tastatur*/
+/**to use the arrow keys on the keyboard*/
 function pressArrow (event) {
     const SPAN_INDEX = document.getElementById('dialogSpanToGetId');
     if (event.key === "ArrowLeft") {
         index = SPAN_INDEX.dataset.arrows;
-        buttonLeft(index);
+        seePreviousImage(index);
     } if (event.key === "ArrowRight") {
         index = SPAN_INDEX.dataset.arrows;
-        buttonRight(index); 
+        seeNextImage(index); 
     }
 }
 
 function footerDialog(index) {
-    return `<button onclick="buttonLeft(${index})" class="dialog_button"><span class="arrow left"></span></button>
-    <span id="dialogSpanToGetId" data-arrows=${index}>${index + 1}/${images.length}</span>
-    <button onclick="buttonRight(${index})" class="dialog_button"><span class="arrow right"></span></button>
+    return `
+    <button onclick="seePreviousImage(${index})" class="dialog_button">
+        <span class="arrow left"></span>
+    </button>
+    <span id="dialogSpanToGetId" data-arrows=${index}>
+    ${index + 1}/${images.length}
+    </span>
+    <button onclick="seeNextImage(${index})" class="dialog_button">
+        <span class="arrow right"></span>
+    </button>
     `
 }
