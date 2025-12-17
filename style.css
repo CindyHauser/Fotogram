@@ -96,8 +96,8 @@ h1 {
 }
 
 .dialog_style img {
-    height: 300px;
-    width: 300px;
+    height: 500px;
+    width: 500px;
     object-fit: cover;
 }
 
@@ -193,6 +193,10 @@ h1 {
         font-size: 36px;
     }
 
+    .monitor_border_main {
+        padding-inline: 0;
+    }
+
     #imageLoad img {
         height: 120px;
         width: 120px;
@@ -222,5 +226,14 @@ h1 {
     #imageLoad img {
         height: 120px;
         width: 120px;
+    }
+
+    .dialog_style img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .monitor_border_main {
+        padding-inline: 0;
     }
 }
