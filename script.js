@@ -34,6 +34,7 @@ function imagesLoading(index) {
 function openDialog(index) {
     DIALOG_REF.showModal();
     showPictures(index);
+    document.body.style.overflow = "hidden";
     DIALOG_FOOTER_REF.innerHTML = footerDialog(index);
 }
 
@@ -43,6 +44,7 @@ function stopBubbling(event) {
 
 function closeDialog() {
     DIALOG_REF.close();
+    document.body.style.overflow = "auto";
 }
 
 function showPictures(index) {
